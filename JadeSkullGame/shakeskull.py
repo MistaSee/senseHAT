@@ -1,3 +1,4 @@
+#MrC's Ninja game: Attempt to cross the classroom without setting off the Jade Skull! If he gets mad at you 3 times, you're out!
 from sense_hat import SenseHat
 import random
 import time
