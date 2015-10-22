@@ -4,8 +4,9 @@ import random
 import time
 
 sense=SenseHat()
-message = [“H”,”a”,”c”,”k”,”l”,”a”,”b”,” “,”I”,”s”,” “,”A”,”w”,”e”,”s”,”o”,”m”,”e”,”!”]
+message = [â€œHâ€,â€aâ€,â€câ€,â€kâ€,â€lâ€,â€aâ€,â€bâ€,â€ â€œ,â€Iâ€,â€sâ€,â€ â€œ,â€Aâ€,â€wâ€,â€eâ€,â€sâ€,â€oâ€,â€mâ€,â€eâ€,â€!â€] #create a list of terms we want to cycle through as our message
 
+#Create a loop which displays each term in order, and picks a new colour for each term.
 while True:
 	for i in message:
 		r=random.randint(0,255)      			#Defining these variables inside the while loop but
