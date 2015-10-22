@@ -1,3 +1,4 @@
+#MrC's Ninja game: Attempt to cross the classroom without setting off the Jade Skull! If he gets mad at you 3 times, you're out!
 from sense_hat import SenseHat
 import random
 import time
@@ -15,7 +16,7 @@ v = [159, 0, 255]
 w = [255, 255, 255] #w is for white
 n = [0, 0, 0] #n is for nothing, or black.
 
-#set up all the images to display
+#set up all the skull images to display
 image1 = [
 n,n,g,g,g,g,g,n,
 n,g,g,g,g,g,g,g,
@@ -82,6 +83,7 @@ n,n,n,n,n,n,n,n,
 n,n,n,g,g,g,n,n
 ]
 
+#set up what happens when you trigger the accelerometer
 def face():
     if i==1:
         sense.set_pixels(cool)
@@ -89,7 +91,8 @@ def face():
     else:
         sense.set_pixels(bad)
         time.sleep(1.5)
-
+        
+#set up animated loop of the skull looking around
 def look():
     sense.set_pixels(image1)
     time.sleep(1)
@@ -104,15 +107,15 @@ def look():
     time.sleep(1)
     x, y, z = sense.get_accelerometer_raw().values()
 
+#Make a loop which checks the accelerometer and assigns values to our dimensional variables
 while True:
-
     x, y, z = sense.get_accelerometer_raw().values()
     x = abs(x)
     y = abs(y)
     z = abs(z)
     i = random.randint(1,2)
 
-    if x > 1 or y > 1 or z > 1:
-        face()
+    if x > 1 or y > 1 or z > 1:   #changing these 3 numbers upward will decrease the sensitivity of the game.
+        face()                  #if the accelerometer is triggered, choose angry or cool face to display
     else:
-        look()
+        look()                  #otherwise, run our animation of looking around.
