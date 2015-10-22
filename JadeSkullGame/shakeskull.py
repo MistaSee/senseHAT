@@ -88,12 +88,12 @@ n,n,n,g,g,g,n,n
 def face():
     if i==1:
         sense.set_pixels(cool)
-	pygame.mixer.music.load("/home/pi/coolsound.wav")
+	pygame.mixer.music.load("/home/pi/coolsound.wav") #This relies on your having copied the sounds to your home directory
 	pygame.mixer.music.play()
 	time.sleep(5)
     else:
         sense.set_pixels(bad)
-	pygame.mixer.music.load("/home/pi/badsound.wav")
+	pygame.mixer.music.load("/home/pi/badsound.wav")  #This relies on your having copied the sounds to your home directory
 	pygame.mixer.music.play()
         time.sleep(3)
 
