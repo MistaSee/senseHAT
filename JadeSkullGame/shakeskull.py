@@ -9,13 +9,8 @@ pygame.mixer.init()
 
 #set up all our colours
 r = [255, 0, 0]
-o = [255, 127, 0]
-y = [255, 255, 0]
 g = [0, 255, 0]
 b = [0, 0, 255] 
-i = [75, 0, 130]
-v = [159, 0, 255]
-w = [255, 255, 255] #w is for white
 n = [0, 0, 0] #n is for nothing, or black.
 
 #set up all the images to display
